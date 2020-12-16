@@ -19,39 +19,60 @@ body {
 /*mindekettő position fixed left: 50%, top 50% translate -50*/
 
 
-p {
-	font-family: 'Playfair Display', serif;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	translate: (-50%, -50%);
-}
 
 h1 {
 	font-family: 'Playfair Display', serif;
-	font-weight: 900;
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	translate: (-50%, -50%);
+	transform: rotate(0) translate(-50%, -50%);
+	color: hsl(19, 88%, 14%);
+	font-weight: 900;
 }
 
-.clicked p {
-	position: absolute;
-  animation: spinClock 4s linear infinite;
-  animation: spinClock 4s linear infinite;
-  animation: spinClock 4s linear infinite;
+p {
+	font-family: 'Playfair Display', serif;
+	position: fixed;
+	top: 53%;
+	left: 50%;
+	transform: rotate(0) translate(-50%, -50%);
+	color: hsl(19, 88%, 14%);
 }
-@keyframes spinClock { 100% { -moz-transform: rotate(-360deg); } }
-/*@keyframes spinClock { 100% { -webkit-transform: rotate(-360deg); } }
-@keyframes spinClock { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }*/
 
-.clicked h1 {
+.clicked > p {
 	position: absolute;
-  animation: spinCounterClock 4s linear infinite;
-  animation: spinCounterClock 4s linear infinite;
-  animation: spinCounterClock 4s linear infinite;
+	animation: spinCounterClock 4s linear infinite;
+	animation-direction: reverse;
+  
 }
-@keyframes spinCounterClock { 100% { -moz-transform: rotate(360deg); } }
-@keyframes spinCounterClock { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spinCounterClock { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@keyframes spinCounterClock {
+	
+	50% {
+		transform: rotate(90deg) translate(-50%, -50%);
+	}
+	
+	50% {
+		transform: rotate(-90deg) translate(-50%, -50%);
+	}
+	
+	
+}
+
+
+.clicked > h1 {
+	position: absolute;
+  animation: spinClock 4s linear infinite;  
+}
+
+@keyframes spinClock {
+
+	0% {
+		transform: rotate(0deg) translate(-50%, -50%);
+	}
+
+	50% {
+		transform: rotate(90deg) translate(-50%, -50%);
+	}
+}
+

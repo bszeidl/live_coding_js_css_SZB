@@ -35,9 +35,9 @@ function pageLoad() {
 		rootDiv.insertAdjacentHTML('afterbegin', `<${myObject.tag}>${myObject.content}</${myObject.tag}>`);
 	}
 
-	rootDiv.addEventListener('click', function() {
-		rootDiv.classList.add('clicked');
-	}	);
+	rootDiv.addEventListener('click', function () {
+		rootDiv.classList.toggle('clicked');
+	});
 
 	
  
