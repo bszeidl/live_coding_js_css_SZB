@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/* reset body padding és margin legyen border box*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*nekünk tetsző szín, ami nem css alapszín*/
+body {
+  background-color: #196619;
+}
+
+/*beágyazni egy googlefontot, a legvastagabb (h1 tag) és a legvékonyabb (p tag)*/
+/*mindekettő position fixed left: 50%, top 50% translate -50*/
+p {
+  font-family: 'Playfair Display', serif;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50%, -50%;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50%, -50%;
+}
+
+.clicked p {
+  position: absolute;
+  -webkit-animation: spinClock 4s linear infinite;
+          animation: spinClock 4s linear infinite;
+  animation: spinClock 4s linear infinite;
+  animation: spinClock 4s linear infinite;
+}
+
+@-webkit-keyframes spinClock {
+  100% {
+    -moz-transform: rotate(-360deg);
+  }
+}
+
+@keyframes spinClock {
+  100% {
+    -moz-transform: rotate(-360deg);
+  }
+}
+
+/*@keyframes spinClock { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spinClock { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }*/
+.clicked h1 {
+  position: absolute;
+  -webkit-animation: spinCounterClock 4s linear infinite;
+          animation: spinCounterClock 4s linear infinite;
+  animation: spinCounterClock 4s linear infinite;
+  animation: spinCounterClock 4s linear infinite;
+}
+
+@-webkit-keyframes spinCounterClock {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@keyframes spinCounterClock {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@keyframes spinCounterClock {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spinCounterClock {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
